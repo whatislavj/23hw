@@ -81,4 +81,29 @@ function isPalindrome(str) {
 const input = 'level';
 const isPalindrome1 = isPalindrome(input);
 console.log(isPalindrome1);
-  
+
+
+// task7
+function findBestMatch(k, arr) {
+    if (arr.length === 0) {
+        return null;
+    }
+
+    let closestNum = arr[0];
+    let closestDist = Math.abs(k - arr[0]);
+
+    for (let i = 1; i < arr.length; i++) {
+        let currentDist = Math.abs(k - arr[i]);
+        if (currentDist < closestDist) {
+            closestNum = arr[i];
+            closestDist = currentDist;
+        }
+    }
+
+    return closestNum;
+}
+
+const k = 3;
+const arr = [5, 8, 12, 3, 10];
+const result = findBestMatch(k, arr);
+console.log("Cel mai apropiat număr este:", result);
