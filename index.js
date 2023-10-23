@@ -65,10 +65,8 @@ console.log(clasifiedStudents);
 // task5
 const text2 = 'Hello world!'
 function reverseString(str) {
-    let splitString = str.split('')
-    let revStr = splitString.reverse()
-    let joinStr = revStr.join('')
-    return joinStr
+    let revStr = str.split('').reverse().join('')
+    return revStr
 }
 console.log(reverseString(text2))
 
